@@ -5,9 +5,9 @@ RUN echo "deb http://deb.debian.org/debian/ unstable main" > /etc/apt/sources.li
  printf 'Package: *\nPin: release a=unstable\nPin-Priority: 90\n' > /etc/apt/preferences.d/limit-unstable
 
 # Install wireguard packges
-RUN apt update && \
- apt install -y --no-install-recommends wireguard-tools iptables nano net-tools procps openresolv && \
- apt clean
+RUN apt-get update && \
+ apt-get install -y --no-install-recommends wireguard-tools iptables nano net-tools procps openresolv && \
+ apt-get clean
 
 # Add main work dir to PATH
 WORKDIR /scripts
