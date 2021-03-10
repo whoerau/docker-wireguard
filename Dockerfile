@@ -5,7 +5,7 @@ RUN echo "deb http://deb.debian.org/debian/ buster-backports main" > /etc/apt/so
 
 # Install wireguard packges
 RUN apt-get update && \
- apt-get install -y --no-install-recommends bc wireguard-tools iptables nano net-tools procps openresolv inotify-tools && \
+ apt-get install -y --no-install-recommends wireguard-tools iptables nano net-tools procps openresolv inotify-tools && \
  apt-get clean
 
 # Add main work dir to PATH
